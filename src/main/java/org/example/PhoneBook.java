@@ -1,10 +1,11 @@
 package org.example;
 
-import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class PhoneBook {
-    private HashMap<String, String> bookName = new HashMap<>();
-    private HashMap<String, String> bookNumber = new HashMap<>();
+    private Map<String, String> bookName =new TreeMap<String, String>();
+    private Map<String, String> bookNumber = new TreeMap<String, String>();
 
     public int add(String name, String number) {
         bookName.put(name, number);
@@ -17,6 +18,10 @@ public class PhoneBook {
 
     public String findByName(String name){
         return bookName.get(name);
+    }
+
+    public String[] printAllNames(){
+        return new String[]{"",""};
     }
 
 }

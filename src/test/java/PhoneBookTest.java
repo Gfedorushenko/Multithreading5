@@ -23,4 +23,12 @@ public class PhoneBookTest {
         phoneBook.add("Vova", "+799977777777");
         assertEquals("+799977777777", phoneBook.findByName("Vova"));
     }
+    //printAllNames
+    @Test
+    public void printAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Vova", "+799977777777");
+        phoneBook.add("Anna", "+799977777778");
+        assertEquals("Anna", phoneBook.printAllNames()[0]);
+    }
 }

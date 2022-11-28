@@ -21,6 +21,6 @@ public class PhoneBookTest {
     public void findByNameTest() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Vova", "+799977777777");
-        assertEquals("799977777777", phoneBook.findByName("+Vova"));
+        assertEquals("+799977777777", phoneBook.findByName("Vova"));
     }
 }

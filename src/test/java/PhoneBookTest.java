@@ -1,6 +1,8 @@
 import org.example.PhoneBook;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PhoneBookTest {
@@ -23,12 +25,17 @@ public class PhoneBookTest {
         phoneBook.add("Vova", "+799977777777");
         assertEquals("+799977777777", phoneBook.findByName("Vova"));
     }
-    //printAllNames
+
     @Test
     public void printAllNames() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Vova", "+799977777777");
         phoneBook.add("Anna", "+799977777778");
-        assertEquals("Anna", phoneBook.printAllNames()[0]);
+
+        HashSet<String> expected = new HashSet<String>();
+        expected.add("Anna");
+        expected.add("Vova");
+
+        assertEquals(expected, phoneBook.printAllNames());
     }
 }

@@ -9,4 +9,11 @@ public class PhoneBookTest {
         PhoneBook phoneBook = new PhoneBook();
         assertEquals(1, phoneBook.add("Vova", "+799977777777"));
     }
+
+    @Test
+    public void findByNumberTest() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Vova", "+799977777777");
+        assertEquals("Vova", phoneBook.findByNumber("+799977777777"));
+    }
 }
